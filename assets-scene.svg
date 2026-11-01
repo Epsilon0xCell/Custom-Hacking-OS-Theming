@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-label="The attic in cross section, animated scene">
+  <rect width="900" height="240" fill="#241d18"/>
+  <polygon points="0,70 240,16 660,16 900,70 900,240 0,240" fill="#372b22"/>
+  <g id="round-window">
+    <circle cx="742" cy="66" r="34" fill="#33465f">
+      <animate attributeName="fill" values="#33465f;#26334a;#33465f" dur="30s" repeatCount="indefinite"/>
+    </circle>
+    <line x1="742" y1="32" x2="742" y2="100" stroke="#171310" stroke-width="4"/>
+    <line x1="708" y1="66" x2="776" y2="66" stroke="#171310" stroke-width="4"/>
+    <rect x="716" y="84" width="9" height="10" fill="#f6be66"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.3;1" dur="30s" repeatCount="indefinite"/></rect>
+    <rect x="756" y="86" width="9" height="10" fill="#f6be66"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.5;0.65;1" dur="30s" repeatCount="indefinite"/></rect>
+  </g>
+  <g id="picture-frames" fill="#967c54">
+    <rect x="180" y="52" width="52" height="38"><animateTransform attributeName="transform" type="rotate" values="0 206 52;1 206 52;0 206 52" dur="9s" repeatCount="indefinite"/></rect>
+    <rect x="270" y="46" width="52" height="38"><animateTransform attributeName="transform" type="rotate" values="0 296 46;-1 296 46;0 296 46" dur="11s" repeatCount="indefinite"/></rect>
+  </g>
+  <g id="dust-motes" fill="#e8c882">
+    <circle cx="430" cy="60" r="2"><animateTransform attributeName="transform" type="translate" values="0 0;14 90" dur="16s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0.1" dur="16s" repeatCount="indefinite"/></circle>
+    <circle cx="468" cy="48" r="1.7"><animateTransform attributeName="transform" type="translate" values="0 0;-10 100" dur="19s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0.1" dur="19s" repeatCount="indefinite"/></circle>
+    <circle cx="500" cy="66" r="2"><animateTransform attributeName="transform" type="translate" values="0 0;8 84" dur="14s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0.1" dur="14s" repeatCount="indefinite"/></circle>
+  </g>
+  <g id="trunk-breathing">
+    <rect x="330" y="140" width="240" height="72" fill="#8c5c30"/>
+    <g stroke="#6e4522" stroke-width="3"><line x1="360" y1="142" x2="362" y2="210"/><line x1="420" y1="142" x2="422" y2="210"/><line x1="480" y1="142" x2="482" y2="210"/><line x1="540" y1="142" x2="542" y2="210"/></g>
+    <rect x="392" y="140" width="14" height="72" fill="#2c2c2e"/><rect x="494" y="140" width="14" height="72" fill="#2c2c2e"/>
+    <g id="trunk-lid">
+      <polygon points="330,140 348,112 552,112 570,140" fill="#a06a36"/>
+      <g><rect x="402" y="118" width="30" height="16" fill="#b2342c"/><rect x="436" y="118" width="30" height="16" fill="#e8dec6"/><rect x="470" y="118" width="30" height="16" fill="#b2342c"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="14s" repeatCount="indefinite"/></g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="14s" repeatCount="indefinite"/>
+    </g>
+    <rect x="438" y="152" width="24" height="26" fill="#cea65c"/>
+  </g>
+  <g id="press-doors" fill="#5d4832">
+    <rect x="620" y="120" width="52" height="92"><animateTransform attributeName="transform" type="rotate" values="0 620 166;2.4 620 166;0 620 166" dur="17s" repeatCount="indefinite"/></rect>
+    <rect x="676" y="120" width="52" height="92"><animateTransform attributeName="transform" type="rotate" values="0 728 166;-2.4 728 166;0 728 166" dur="17s" repeatCount="indefinite"/></rect>
+  </g>
+  <g id="grandfather-clock">
+    <rect x="238" y="104" width="48" height="112" fill="#4a3826"/>
+    <circle cx="262" cy="126" r="15" fill="#eee6d0"/>
+    <line x1="262" y1="150" x2="262" y2="196" stroke="#cea65c" stroke-width="3">
+      <animateTransform attributeName="transform" type="rotate" values="-14 262 150;14 262 150;-14 262 150" dur="2.4s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="262" cy="198" r="6" fill="#cea65c"><animateTransform attributeName="transform" type="rotate" values="-14 262 150;14 262 150;-14 262 150" dur="2.4s" repeatCount="indefinite"/></circle>
+  </g>
+  <g id="near-stair">
+    <line x1="0" y1="226" x2="900" y2="218" stroke="#171310" stroke-width="5"/>
+    <g><rect x="60" y="200" width="34" height="20" fill="#b2342c"/><rect x="98" y="200" width="34" height="20" fill="#e8dec6"/><rect x="136" y="200" width="34" height="20" fill="#b2342c"/><rect x="60" y="200" width="110" height="5" fill="#e8dec6"/></g>
+    <g id="key-turning">
+      <circle cx="806" cy="196" r="7" fill="none" stroke="#cea65c" stroke-width="3.4"/>
+      <rect x="803" y="202" width="6" height="20" fill="#cea65c"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 806 196;180 806 196;180 806 196" keyTimes="0;0.4;1" dur="18s" repeatCount="indefinite"/>
+    </g>
+    <path id="candle-flame" d="M846 208 q5 -12 0 -20 q-5 8 0 20" fill="#f2a83c">
+      <animate attributeName="d" values="M846 208 q5 -12 0 -20 q-5 8 0 20;M846 208 q8 -9 1 -17 q-6 7 -1 17;M846 208 q5 -12 0 -20 q-5 8 0 20" dur="9s" repeatCount="indefinite"/>
+    </path>
+    <rect x="840" y="208" width="12" height="14" fill="#a8aaae"/>
+  </g>
+</svg>

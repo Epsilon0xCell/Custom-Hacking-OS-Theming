@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 34" role="img" aria-label="Brass room key on its fob swinging across the rule">
+  <line x1="6" y1="24" x2="894" y2="24" stroke="#c9bb9c" stroke-width="2.4"/>
+  <g id="key-swing">
+    <rect x="0" y="6" width="34" height="15" rx="4" fill="#8a6a34"/>
+    <circle cx="44" cy="13" r="6" fill="none" stroke="#cea65c" stroke-width="3"/>
+    <rect x="48" y="10" width="5" height="17" fill="#cea65c"/><rect x="48" y="22" width="11" height="5" fill="#cea65c"/>
+    <animateTransform attributeName="transform" type="translate" values="6 0;806 0" dur="7s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="rotate" values="-7 20 8;7 20 8;-7 20 8" dur="1.8s" repeatCount="indefinite" additive="sum"/>
+  </g>
+</svg>

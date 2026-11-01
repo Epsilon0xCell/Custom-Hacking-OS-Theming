@@ -3,146 +3,117 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Custom Hacking OS Theming: what it is, how it runs, where it stops</title>
-<meta name="description" content="When theming a hacking OS that you didn&#x27;t create, there are only two things that have to be themed, the rest should not be themed as it will be a wast">
+<title>Custom Hacking OS Theming: the attic room</title>
+<meta name="description" content="A short ideology note, not a theme package: a hacking OS somebody else built needs only three things themed, and everything else customised should be the hacking tools themselves.">
 <style>
-:root {
-  --bg: #eee4d2; --panel: #f8f0e0; --ink: #4a1e22;
-  --mut: #ffffff;
-  --acc: #a83e36; --acc2: #406078;
-  --line: #f8f0e0;
-}
+@font-face { font-family: 'Adamina'; src: url('fonts/Adamina-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Archivo'; src: url('fonts/Archivo.ttf') format('truetype'); }
+:root { --soot:#211b18; --cream:#f3ead6; --amber:#d99a3d; --board:#efe6d0; --ink:#33291f; }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink);
-  font-family: Charter, Georgia, serif; line-height: 1.55; }
-code, pre, .mono { font-family: 'DejaVu Sans Mono', monospace; }
-a { color: var(--acc2); }
-.hero { padding: 3rem 6vw 1rem; }
-.hero img.banner { width: 100%; height: auto; border: 1px solid var(--line);
-  border-radius: 10px; }
-.logo { width: 92px; height: 92px; border-radius: 18px;
-  border: 1px solid var(--line); }
-h1 { font-size: 2.4rem; margin: 0.4em 0 0.1em; }
-h2 { border-bottom: 2px solid var(--acc); padding-bottom: 0.2em;
-  margin-top: 2em; }
-.lede { font-size: 1.15rem; max-width: 62ch; }
-main { padding: 0 6vw 3rem; max-width: 1180px; margin: 0 auto; }
-.grid { display: grid; gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-.card { background: var(--panel); border: 1px solid var(--line);
-  border-radius: 12px; padding: 1rem 1.2rem; }
-.card.pop { animation: rise 0.7s ease both; }
-@keyframes rise { from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: none; } }
-pre.code { background: #101014; color: #e8e6df; padding: 1rem 1.2rem;
-  border-radius: 12px; overflow-x: auto; font-size: 0.86rem;
-  border-left: 5px solid var(--acc); }
-table { border-collapse: collapse; width: 100%; }
-td, th { border-bottom: 1px solid var(--line); padding: 0.45rem 0.6rem;
-  text-align: left; }
-.shots { display: grid; gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.shots img { width: 100%; height: auto; border: 1px solid var(--line);
-  border-radius: 10px; background: #f4f1e8; }
-footer { padding: 2rem 6vw; border-top: 1px solid var(--line);
-  color: var(--mut); }
-.rail { display: flex; gap: 1.2rem; align-items: flex-start; }
-.rail nav { position: sticky; top: 1rem; min-width: 180px; }
-@media (max-width: 760px) { .rail { flex-direction: column; }
-  .rail nav { position: static; } }
-@media (prefers-reduced-motion: reduce) {
-  .card.pop { animation: none; } * { scroll-behavior: auto; } }
+body { margin:0; background:var(--soot); color:var(--ink); font-family:'Archivo', Verdana, sans-serif; line-height:1.62; }
+.room { max-width:920px; margin:0 auto; background:#2c2420; padding:0 0 3rem; }
+.inner { padding:0 38px; }
+@media (max-width:720px){ .inner{padding:0 18px;} }
+header.hero { padding:2.2rem 38px 1rem; color:var(--cream); }
+header.hero img.banner { width:100%; height:auto; border:3px solid #4a3a2c; }
+header.hero img.logo { width:78px; height:78px; float:right; margin:0 0 1rem 1rem; border:2px solid var(--cream); }
+h1 { font-family:'Adamina', Georgia, serif; font-size:2.4rem; margin:.3em 0 .15em; }
+h2 { font-family:'Adamina', Georgia, serif; font-size:1.6rem; margin:0 0 .4em; }
+a { color:#8a4d1d; }
+header.hero a, footer a { color:var(--amber); }
+nav.rail { display:flex; flex-wrap:wrap; gap:1.1rem; padding:0 38px; }
+nav.rail a { color:var(--cream); }
+section.chamber { background:var(--board); border:2px solid #4a3a2c; border-top:9px solid transparent; border-image:repeating-linear-gradient(90deg,#a4342c 0 34px,#efe6d0 34px 68px) 9; padding:1.3rem 1.5rem; margin:2.2rem 0 0; }
+.btn { display:inline-block; background:#f6efdd; color:#4a2f14; border:2px solid #4a3a2c; outline:2px solid var(--amber); outline-offset:-6px; border-radius:46% 54% 52% 48% / 38% 40% 60% 62%; padding:.6rem 1.3rem; text-decoration:none; cursor:pointer; font-family:'Archivo',sans-serif; box-shadow:inset 0 0 12px rgba(217,154,61,.35); }
+.btn:hover { box-shadow:inset 0 0 20px rgba(217,154,61,.75); }
+.btn:active { transform:translateY(2px); box-shadow:inset 0 0 6px rgba(217,154,61,.4); }
+.btn:focus { outline:3px double var(--cream); outline-offset:3px; }
+a.cushion::before { content:'\25A6  '; color:#a4342c; }
+a.cushion:hover::before { color:var(--amber); }
+.shelf { border:none; border-top:4px solid var(--cream); box-shadow:0 7px 0 -3px rgba(0,0,0,.45); margin:2.4rem 0 0; }
+.shelf.light { border-top:2px solid #8a7a5f; box-shadow:none; }
+table { width:100%; border-collapse:collapse; font-size:14.5px; margin-top:12px; }
+td, th { border-bottom:1px solid #c9bb9c; padding:.45rem .6rem; text-align:left; }
+pre.code { background:#171310; color:#efe6d0; padding:1rem 1.2rem; overflow-x:auto; font-size:.88rem; }
+.shots { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:12px; }
+.shots img { width:100%; height:auto; border:2px solid #4a3a2c; background:#f4f1e8; }
+.sewn { display:inline-block; background:#f8f1de; border:2px dashed #a8843c; padding:.55rem .9rem; max-width:56ch; }
+footer { color:#cbbfa5; padding:2rem 38px 0; }
 </style>
 </head>
-<body class="layout-rail">
-<!-- This page exists for Custom-Hacking-OS-Theming alone: the layout (sidebar-rail),
-     the colors, and the type were picked for this project, not
-     shared with the other project pages. The code block below is
-     copied from the file it names, line for line. If it looks
-     plain, that is because the project is plain, and I would
-     rather the page match the project than dress it up. The one
-     thing I will not do here is oversell: what this project does
-     not do is stated on the page, not hidden from it. -->
-<header class="hero">
-  <img class="logo" src="assets/logo.png" alt="Custom Hacking OS Theming logo">
-  <img class="banner" src="assets/banner.png" alt="">
-  <h1>Custom Hacking OS Theming</h1>
-  <p class="mono"><a href="https://github.com/Epsilon0xCell/Custom-Hacking-OS-Theming">github.com/Epsilon0xCell/Custom-Hacking-OS-Theming</a></p>
-</header>
-
-<main>
-  <section class="rail">
-    <nav aria-label="on this page">
-      <p class="mono"><a href="#run">Run it</a><br>
-      <a href="#files">The files</a><br>
-      <a href="#sheets">The sheets</a><br>
-      <a href="https://github.com/Epsilon0xCell/Custom-Hacking-OS-Theming">The repo</a></p>
-    </nav>
-    <div>
-      <p class="lede">When theming a hacking OS that you didn&#x27;t create, there are only two things that have to be themed, the rest should not be themed as it will be a waste of time. All the other customizations should be the hacking tools themselves.</p>
-      <div class="grid">
-        <div class="card pop"><h3>What it is</h3>
-          <p>Custom Hacking OS Theming: 1 files, 8 counted
-          lines across Markdown 8. One job, done in the
-          open, in files you can read.</p></div>
-        <div class="card pop"><h3>The biggest piece</h3>
-          <p><code>README.md</code> carries the most
-          lines. If the project grows, that file is where the growth
-          lands first, for better or worse.</p></div>
-        <div class="card pop"><h3>The honest gap</h3>
-          <p>No test files yet. That is the honest gap, and the roadmap in the visuals folder says what the first one should cover.</p></div>
+<body>
+<div class="room">
+  <header class="hero">
+    <img class="logo" src="assets/logo.png" alt="Custom Hacking OS Theming logo: the cedar trunk shut, with its brass key">
+    <img class="banner" src="assets/banner.png" alt="The attic trunk with its lid up, the name lettered on the inventory label inside the lid">
+    <h1>Custom Hacking OS Theming</h1>
+    <p><a class="cushion" href="https://github.com/Epsilon0xCell/Custom-Hacking-OS-Theming">github.com/Epsilon0xCell/Custom-Hacking-OS-Theming</a></p>
+    <p>This repository is a short ideology note, not a theme package. It ships no theme files, no scripts, and no install steps. It says that a hacking OS somebody else built needs only three things themed, and everything else customised should be the hacking tools themselves.</p>
+    <p>When theming a hacking OS that you did not create, there are only three things that have to be themed, the rest should not be themed as it will be a waste of time. All the other customizations should be the hacking tools themselves.</p>
+  </header>
+  <nav class="rail" aria-label="on this page">
+    <a href="#run">Run it</a>
+    <a href="#files">The files</a>
+    <a href="#sheets">The sheets</a>
+    <a href="https://github.com/Epsilon0xCell/Custom-Hacking-OS-Theming">The repo</a>
+  </nav>
+  <div class="inner">
+    <section class="chamber" id="seat">
+      <h2>First room, the window seat: wallpaper</h2>
+      <p>Wallpaper can be themed and changed. The note allows it and warns in the same breath: do not get drawn into live wallpapers, because they drain system resources. On this seat there is a still, chosen wallpaper, resting like a spread blanket. Nothing moves anywhere near it.</p>
+      <p><span class="sewn">Label sewn into the hem: do not get sucked into the live wallpapers, this drains system resources.</span></p>
+    </section>
+    <hr class="shelf">
+    <section class="chamber" id="shell">
+      <h2>Second room, the shell: where commands run</h2>
+      <p>Theme the shell as it is where you execute commands. This is the warmest room in the attic, the one place with a chair pulled up and a lamp lit, because it is where the work actually sits.</p>
+      <p>Its stated furniture: Ghostty as the terminal emulator the author likes for the range of effects that can be applied to it, fish as the shell, fastfetch, and something along the lines of powerlevel10k.</p>
+    </section>
+    <hr class="shelf light">
+    <section class="chamber" id="press">
+      <h2>Third room, the linen press: colour scheme</h2>
+      <p>Colour scheme, admitted only on a condition: theme it only if it is easily changed, the way Pop!_OS Cosmic allows it to be changed. Shelves of folded colour, and a shelf left pointedly empty for every scheme that would cost an afternoon.</p>
+      <p><span class="sewn">Label sewn into the hem: only if easily changed, like how Pop!_OS Cosmic allows you to.</span></p>
+    </section>
+    <hr class="shelf">
+    <section class="chamber" id="closet">
+      <h2>Closet under the stairs, what was not taken out: everything else</h2>
+      <p>The note is blunt that theming the rest wastes time, and this page stays blunt with it. No invented theme pack, no gallery of skins this repo does not contain, no download.</p>
+      <p><span class="sewn">Label sewn into the hem: there are no theme files, scripts, or install steps here. This is the author's own theming rule, not a package.</span></p>
+      <p>One honest line the older snapshot could not say: the README has since grown a closing note that repeats, in plain words, that this is the author's own theming rule and not a package, so the three numbered items and that clarification are both preserved on this page. Where the older page hero quotation said only two things have to be themed while its own list gave three, this page prints three everywhere. The list is the author's list; the miscount was the old page.</p>
+    </section>
+    <hr class="shelf light">
+    <section class="chamber" id="run">
+      <h2>Run it</h2>
+      <p>There is nothing to install. Read the note: clone it, read the top file first, and that is the whole visit.</p>
+      <pre class="code">$ git clone https://github.com/Epsilon0xCell/Custom-Hacking-OS-Theming.git
+$ cd Custom-Hacking-OS-Theming</pre>
+      <p><a class="btn" href="https://github.com/Epsilon0xCell/Custom-Hacking-OS-Theming">Open the repo</a></p>
+    </section>
+    <hr class="shelf">
+    <section class="chamber" id="files">
+      <h2>The files</h2>
+      <table>
+        <tr><th>File</th><th>Lines</th></tr>
+        <tr><td><code>README.md</code></td><td>8 counted lines of Markdown in the snapshot this page keeps</td></tr>
+      </table>
+      <p>Custom Hacking OS Theming: 1 file and 8 counted lines of Markdown, held as the site prints them. README.md is the only counted file.</p>
+    </section>
+    <hr class="shelf light">
+    <section class="chamber" id="sheets">
+      <h2>The sheets</h2>
+      <p>I sketch my projects on notebook paper so I have to understand them well enough to draw them. The full set, with the counts and how they were counted, is the <a class="cushion" href="https://github.com/Epsilon0xCell/Custom-Hacking-OS-Theming/tree/main/Custom-Hacking-OS-Theming-Visuals">Custom-Hacking-OS-Theming-Visuals</a> folder in the repo. Nothing is drawn over the binder holes. That is a rule, not a style.</p>
+      <div class="shots">
+        <img src="assets/architecture.png" alt="Hand drawn architecture sheet for Custom Hacking OS Theming">
+        <img src="assets/flowchart.png" alt="Hand drawn flowchart sheet for Custom Hacking OS Theming">
+        <img src="assets/product-map.png" alt="Hand drawn product map sheet for Custom Hacking OS Theming">
       </div>
-      <section id="run">
-        <h2>Run it</h2>
-        <p>The repo README has the exact commands for this one. The
-        shape is the shape for most of my projects: clone it, read the
-        top file first so you know what will happen, then run it on
-        something you do not mind breaking.</p>
-        <p class="mono">$ git clone https://github.com/Epsilon0xCell/Custom-Hacking-OS-Theming.git<br>$ cd Custom-Hacking-OS-Theming</p>
-      </section>
-      
-  <section aria-label="real code">
-    <h2>The code, as it sits in the repo</h2>
-    <p>From <code>README.md</code>, line 1 on. I did
-    not tidy it for the page. What you see is what the file has.</p>
-    <pre class="code"><code># Theming-Custom-Hacking-OS
-Ideology for Theming
-
-When theming a hacking OS that you didn&#x27;t create, there are only two things that have to be themed, the rest should not be themed as it will be a waste of time. All the other customizations should be the hacking tools themselves.
-
-1. Wallpaper (Wallpaper can be themed and changed) (Do not get sucked into the live wallpapers, this drains system resources.)
-2. Shell (Theme the shell as it is where you execute commands.) (I like ghostty emulator due to the extensive effects you can apply to it) (I also prefer using fish and fastfetch (as well as something similar to powerlevel10k)
-3. Color Scheme (Only if easily changed like how Pop!_OS Cosmic allows you to)</code></pre>
-  </section>
-      <section id="files">
-        <h2>The files that matter</h2>
-        <table><tr><th>File</th><th>Lines</th></tr>
-        <tr><td><code>README.md</code></td><td>8</td></tr>
-        </table>
-        <p>Names doing the work: <span class="mono">no named functions in the snapshot</span>.</p>
-      </section>
-      <section id="sheets">
-        <h2>Drawn by hand</h2>
-        <p>I sketch my projects on notebook paper so I have to
-        understand them well enough to draw them. The full set,
-        with the counts and how they were counted, is the
-        <a href="https://github.com/Epsilon0xCell/Custom-Hacking-OS-Theming/tree/main/Custom-Hacking-OS-Theming-Visuals">Custom-Hacking-OS-Theming-Visuals</a>
-        folder in the repo. Nothing is drawn over the binder holes.
-        That is a rule, not a style.</p>
-        <div class="shots">
-          <img src="assets/architecture.png" alt="Hand drawn architecture sheet for Custom Hacking OS Theming">
-          <img src="assets/flowchart.png" alt="Hand drawn flowchart sheet for Custom Hacking OS Theming">
-          <img src="assets/product-map.png" alt="Hand drawn product map sheet for Custom Hacking OS Theming">
-        </div>
-      </section>
-    </div>
-  </section>
-</main>
-<footer>
-  <p>Custom Hacking OS Theming is one of my projects. This page was written
-  from the repo itself on 2026-10-30: the counts are the
-  repo's counts, the code is the repo's code, and the gaps are the
-  repo's gaps.</p>
-</footer>
+    </section>
+  </div>
+  <footer>
+    <p>The attic stairs going down into lamplight, trunk lid closed in miniature at the top of them. Three chosen pieces in daily use downstairs, and nothing themed for the sake of theming it.</p>
+    <p>Custom Hacking OS Theming is one of my projects. This page was rebuilt from the repo itself: the counts are the repo counts, and the gaps are the repo gaps.</p>
+  </footer>
+</div>
 </body>
 </html>
