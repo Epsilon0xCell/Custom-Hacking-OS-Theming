@@ -6,25 +6,27 @@
 <title>Custom Hacking OS Theming: three tiles on a dark wall</title>
 <meta name="description" content="A short ideology note, not a theme package: a hacking OS somebody else built needs only three things themed, and everything else customised should be the hacking tools themselves.">
 <style>
-@font-face { font-family: 'Adamina'; src: url('fonts/Adamina-Regular.ttf') format('truetype'); }
-@font-face { font-family: 'Archivo'; src: url('fonts/Archivo.ttf') format('truetype'); }
+@font-face { font-family: 'Fraunces'; src: url('fonts/Fraunces-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Fraunces'; src: url('fonts/Fraunces-Bold.ttf') format('truetype'); font-weight: 700; }
+@font-face { font-family: 'Public Sans'; src: url('fonts/PublicSans-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Public Sans'; src: url('fonts/PublicSans-Bold.ttf') format('truetype'); font-weight: 700; }
 :root { --soot:#0b0e0c; --cream:#f2eee3; --amber:#1fae74; --board:#e9e4d4; --ink:#1c2420; }
 * { box-sizing: border-box; }
-body { margin:0; background:var(--soot); color:var(--ink); font-family:'Archivo', Verdana, sans-serif; line-height:1.62; }
+body { margin:0; background:var(--soot); color:var(--ink); font-family:'Public Sans', Verdana, sans-serif; line-height:1.62; }
 .room { max-width:920px; margin:0 auto; background:#121613; padding:0 0 3rem; }
 .inner { padding:0 38px; }
 @media (max-width:720px){ .inner{padding:0 18px;} }
 header.hero { padding:2.2rem 38px 1rem; color:var(--cream); }
 header.hero img.banner { width:100%; height:auto; border:3px solid #2e4a3a; }
 header.hero img.logo { width:78px; height:78px; float:right; margin:0 0 1rem 1rem; border:2px solid var(--cream); }
-h1 { font-family:'Adamina', Georgia, serif; font-size:2.4rem; margin:.3em 0 .15em; }
-h2 { font-family:'Adamina', Georgia, serif; font-size:1.6rem; margin:0 0 .4em; }
+h1 { font-family:'Fraunces', Georgia, serif; font-size:2.4rem; margin:.3em 0 .15em; }
+h2 { font-family:'Fraunces', Georgia, serif; font-size:1.6rem; margin:0 0 .4em; }
 a { color:#0e7a4e; }
 header.hero a, footer a { color:var(--amber); }
 nav.rail { display:flex; flex-wrap:wrap; gap:1.1rem; padding:0 38px; }
 nav.rail a { color:var(--cream); }
 section.chamber { background:var(--board); border:2px solid #2e4a3a; border-top:9px solid transparent; border-image:repeating-linear-gradient(90deg,#1fae74 0 34px,#e9e4d4 34px 68px) 9; padding:1.3rem 1.5rem; margin:2.2rem 0 0; }
-.btn { display:inline-block; background:#f2eee3; color:#123324; border:2px solid #2e4a3a; outline:2px solid var(--amber); outline-offset:-6px; border-radius:46% 54% 52% 48% / 38% 40% 60% 62%; padding:.6rem 1.3rem; text-decoration:none; cursor:pointer; font-family:'Archivo',sans-serif; box-shadow:inset 0 0 12px rgba(31,174,116,.35); }
+.btn { display:inline-block; background:#f2eee3; color:#123324; border:2px solid #2e4a3a; outline:2px solid var(--amber); outline-offset:-6px; border-radius:46% 54% 52% 48% / 38% 40% 60% 62%; padding:.6rem 1.3rem; text-decoration:none; cursor:pointer; font-family:'Public Sans',sans-serif; box-shadow:inset 0 0 12px rgba(31,174,116,.35); }
 .btn:hover { box-shadow:inset 0 0 20px rgba(31,174,116,.75); }
 .btn:active { transform:translateY(2px); box-shadow:inset 0 0 6px rgba(31,174,116,.4); }
 .btn:focus { outline:3px double var(--cream); outline-offset:3px; }
