@@ -3,49 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Custom Hacking OS Theming: the attic room</title>
+<title>Custom Hacking OS Theming: three tiles on a dark wall</title>
 <meta name="description" content="A short ideology note, not a theme package: a hacking OS somebody else built needs only three things themed, and everything else customised should be the hacking tools themselves.">
 <style>
 @font-face { font-family: 'Adamina'; src: url('fonts/Adamina-Regular.ttf') format('truetype'); }
 @font-face { font-family: 'Archivo'; src: url('fonts/Archivo.ttf') format('truetype'); }
-:root { --soot:#211b18; --cream:#f3ead6; --amber:#d99a3d; --board:#efe6d0; --ink:#33291f; }
+:root { --soot:#0b0e0c; --cream:#f2eee3; --amber:#1fae74; --board:#e9e4d4; --ink:#1c2420; }
 * { box-sizing: border-box; }
 body { margin:0; background:var(--soot); color:var(--ink); font-family:'Archivo', Verdana, sans-serif; line-height:1.62; }
-.room { max-width:920px; margin:0 auto; background:#2c2420; padding:0 0 3rem; }
+.room { max-width:920px; margin:0 auto; background:#121613; padding:0 0 3rem; }
 .inner { padding:0 38px; }
 @media (max-width:720px){ .inner{padding:0 18px;} }
 header.hero { padding:2.2rem 38px 1rem; color:var(--cream); }
-header.hero img.banner { width:100%; height:auto; border:3px solid #4a3a2c; }
+header.hero img.banner { width:100%; height:auto; border:3px solid #2e4a3a; }
 header.hero img.logo { width:78px; height:78px; float:right; margin:0 0 1rem 1rem; border:2px solid var(--cream); }
 h1 { font-family:'Adamina', Georgia, serif; font-size:2.4rem; margin:.3em 0 .15em; }
 h2 { font-family:'Adamina', Georgia, serif; font-size:1.6rem; margin:0 0 .4em; }
-a { color:#8a4d1d; }
+a { color:#0e7a4e; }
 header.hero a, footer a { color:var(--amber); }
 nav.rail { display:flex; flex-wrap:wrap; gap:1.1rem; padding:0 38px; }
 nav.rail a { color:var(--cream); }
-section.chamber { background:var(--board); border:2px solid #4a3a2c; border-top:9px solid transparent; border-image:repeating-linear-gradient(90deg,#a4342c 0 34px,#efe6d0 34px 68px) 9; padding:1.3rem 1.5rem; margin:2.2rem 0 0; }
-.btn { display:inline-block; background:#f6efdd; color:#4a2f14; border:2px solid #4a3a2c; outline:2px solid var(--amber); outline-offset:-6px; border-radius:46% 54% 52% 48% / 38% 40% 60% 62%; padding:.6rem 1.3rem; text-decoration:none; cursor:pointer; font-family:'Archivo',sans-serif; box-shadow:inset 0 0 12px rgba(217,154,61,.35); }
-.btn:hover { box-shadow:inset 0 0 20px rgba(217,154,61,.75); }
-.btn:active { transform:translateY(2px); box-shadow:inset 0 0 6px rgba(217,154,61,.4); }
+section.chamber { background:var(--board); border:2px solid #2e4a3a; border-top:9px solid transparent; border-image:repeating-linear-gradient(90deg,#1fae74 0 34px,#e9e4d4 34px 68px) 9; padding:1.3rem 1.5rem; margin:2.2rem 0 0; }
+.btn { display:inline-block; background:#f2eee3; color:#123324; border:2px solid #2e4a3a; outline:2px solid var(--amber); outline-offset:-6px; border-radius:46% 54% 52% 48% / 38% 40% 60% 62%; padding:.6rem 1.3rem; text-decoration:none; cursor:pointer; font-family:'Archivo',sans-serif; box-shadow:inset 0 0 12px rgba(31,174,116,.35); }
+.btn:hover { box-shadow:inset 0 0 20px rgba(31,174,116,.75); }
+.btn:active { transform:translateY(2px); box-shadow:inset 0 0 6px rgba(31,174,116,.4); }
 .btn:focus { outline:3px double var(--cream); outline-offset:3px; }
-a.cushion::before { content:'\25A6  '; color:#a4342c; }
+a.cushion::before { content:'\25A6  '; color:#1fae74; }
 a.cushion:hover::before { color:var(--amber); }
 .shelf { border:none; border-top:4px solid var(--cream); box-shadow:0 7px 0 -3px rgba(0,0,0,.45); margin:2.4rem 0 0; }
-.shelf.light { border-top:2px solid #8a7a5f; box-shadow:none; }
+.shelf.light { border-top:2px solid #5f7a68; box-shadow:none; }
 table { width:100%; border-collapse:collapse; font-size:14.5px; margin-top:12px; }
-td, th { border-bottom:1px solid #c9bb9c; padding:.45rem .6rem; text-align:left; }
-pre.code { background:#171310; color:#efe6d0; padding:1rem 1.2rem; overflow-x:auto; font-size:.88rem; }
+td, th { border-bottom:1px solid #b9bfae; padding:.45rem .6rem; text-align:left; }
+pre.code { background:#0b0e0c; color:#e9e4d4; padding:1rem 1.2rem; overflow-x:auto; font-size:.88rem; }
 .shots { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:12px; }
-.shots img { width:100%; height:auto; border:2px solid #4a3a2c; background:#f4f1e8; }
-.sewn { display:inline-block; background:#f8f1de; border:2px dashed #a8843c; padding:.55rem .9rem; max-width:56ch; }
-footer { color:#cbbfa5; padding:2rem 38px 0; }
+.shots img { width:100%; height:auto; border:2px solid #2e4a3a; background:#eef0e8; }
+.sewn { display:inline-block; background:#eef2e6; border:2px dashed #1fae74; padding:.55rem .9rem; max-width:56ch; }
+footer { color:#a9b8a4; padding:2rem 38px 0; }
 </style>
 </head>
 <body>
 <div class="room">
   <header class="hero">
-    <img class="logo" src="assets/logo.png" alt="Custom Hacking OS Theming logo: the cedar trunk shut, with its brass key">
-    <img class="banner" src="assets/banner.png" alt="The attic trunk with its lid up, the name lettered on the inventory label inside the lid">
+    <img class="logo" src="assets/logo.png" alt="Custom Hacking OS Theming logo: three mosaic tiles, a landscape, a chevron and a droplet">
+    <img class="banner" src="assets/banner.png" alt="A mosaic workstation wall: a wallpaper landscape panel, a shell window with a chevron, and a colour swatch panel, the rest plain dark tiles">
     <h1>Custom Hacking OS Theming</h1>
     <p><a class="cushion" href="https://github.com/Epsilon0xCell/Custom-Hacking-OS-Theming">github.com/Epsilon0xCell/Custom-Hacking-OS-Theming</a></p>
     <p>This repository is a short ideology note, not a theme package. It ships no theme files, no scripts, and no install steps. It says that a hacking OS somebody else built needs only three things themed, and everything else customised should be the hacking tools themselves.</p>
