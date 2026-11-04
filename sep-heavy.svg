@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 34" role="img" aria-label="Brass room key on its fob swinging across the rule">
-  <line x1="6" y1="24" x2="894" y2="24" stroke="#c9bb9c" stroke-width="2.4"/>
-  <g id="key-swing">
-    <rect x="0" y="6" width="34" height="15" rx="4" fill="#8a6a34"/>
-    <circle cx="44" cy="13" r="6" fill="none" stroke="#cea65c" stroke-width="3"/>
-    <rect x="48" y="10" width="5" height="17" fill="#cea65c"/><rect x="48" y="22" width="11" height="5" fill="#cea65c"/>
-    <animateTransform attributeName="transform" type="translate" values="6 0;806 0" dur="7s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="rotate" values="-7 20 8;7 20 8;-7 20 8" dur="1.8s" repeatCount="indefinite" additive="sum"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 26" role="img" aria-label="Major separator"><rect width="800" height="26" fill="transparent"/><g><rect x="10" y="5" width="16" height="16" fill="#1fae74"/><rect x="60" y="5" width="16" height="16" fill="#0d100e"/><rect x="110" y="5" width="16" height="16" fill="#f2eee3"/><rect x="160" y="5" width="16" height="16" fill="#1fae74"/><rect x="210" y="5" width="16" height="16" fill="#0d100e"/><rect x="260" y="5" width="16" height="16" fill="#f2eee3"/><rect x="310" y="5" width="16" height="16" fill="#1fae74"/><rect x="360" y="5" width="16" height="16" fill="#0d100e"/><rect x="410" y="5" width="16" height="16" fill="#f2eee3"/><rect x="460" y="5" width="16" height="16" fill="#1fae74"/><rect x="510" y="5" width="16" height="16" fill="#0d100e"/><rect x="560" y="5" width="16" height="16" fill="#f2eee3"/><rect x="610" y="5" width="16" height="16" fill="#1fae74"/><rect x="660" y="5" width="16" height="16" fill="#0d100e"/><rect x="710" y="5" width="16" height="16" fill="#f2eee3"/><rect x="760" y="5" width="16" height="16" fill="#1fae74"/></g><rect x="0" y="11" width="26" height="4" fill="#f2eee3"><animate attributeName="x" values="-26;800" dur="5s" repeatCount="indefinite"/></rect></svg>
